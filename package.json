@@ -1,0 +1,31 @@
+{
+  "name": "aa-chat-server",
+  "version": "0.0.1",
+  "description": "Websocket chat module, purposed to attach to game server",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fleischers/aa-chat-server.git"
+  },
+  "keywords": [
+    "chat",
+    "websockets"
+  ],
+  "author": "Glib Ischenko <fcl@gorlifsense.com> (http://fleischer.gorlifsense.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Fleischers/aa-chat-server/issues"
+  },
+  "homepage": "https://github.com/Fleischers/aa-chat-server#readme",
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "socket.io-client": "^1.4.5"
+  },
+  "dependencies": {
+    "socket.io": "^1.4.5"
+  }
+}
