@@ -5,9 +5,13 @@ var io = require('socket.io')(PORT);
 var winston = require('winston');
 
 io.on('connection', function (socket) {
-  winston.info('connection');
+  winston.info('user connection');
   socket.on('message', function (msg) {
-    winston.info('message: ' + msg);
+    winston.info('message: ', msg);
+    io.emit('message', msg);
+  });
+  socket.on('disconnect', function(){
+    winston.info('user disconnected');
   });
 });
 

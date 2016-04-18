@@ -1,3 +1,12 @@
 language: node_js
 node_js:
   - "5"
+before_script:
+  - nohup npm start >> server.log &
+after_script:
+  - cat server.log
+notifications:
+  slack:
+    rooms:
+      weirdunicorn:zYbooEy22vfBloHorKZV5XPE#development
+    on_success: change
