@@ -21,6 +21,6 @@ io.on('listen', function () {
 
 io.on('error', function (error) {
   // speaks while holding a bow in his hands:
-  winston.info('You have failed this server!');
+  winston.error('You have failed this server!');
   throw error;
 });
