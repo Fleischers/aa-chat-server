@@ -1,17 +1,18 @@
 {
   "name": "aa-chat-server",
-  "version": "0.0.1-alpha.v1",
+  "version": "0.0.1-alpha.v2",
   "description": "Websocket chat server module, purposed to attach to another server",
   "main": "app.js",
   "scripts": {
     "start": "./node_modules/.bin/forever --minUptime 1000 --spinSleepTime 1000 app.js",
-    "test": "istanbul cover ./node_modules/mocha/bin/_mocha",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha",
     "mocha": "./node_modules/.bin/mocha",
     "beautify": "./node_modules/.bin/js-beautify",
     "unstaged": "git status --porcelain",
-    "codeclimate": "CODECLIMATE_REPO_TOKEN= codeclimate < ./coverage/lcov.info",
-    "coverage": "open coverage/lcov-report/index.html",
-    "eslint": "./node_modules/.bin/eslint ."
+    "codeclimate": "./node_modules/.bin/codeclimate-test-reporter < ./coverage/lcov.info",
+    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec",
+    "coveragereport": "firefox coverage/lcov-report/index.html",
+    "eslint": "./node_modules/.bin/eslint --ignore-path .gitignore ."
   },
   "repository": {
     "type": "git",
@@ -37,6 +38,7 @@
     "js-beautify": "^1.6.2",
     "mocha": "^2.4.5",
     "pre-commit": "^1.1.2",
+    "should": "^8.3.1",
     "socket.io-client": "^1.4.5"
   },
   "dependencies": {
