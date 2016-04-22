@@ -4,6 +4,8 @@ env:
   mocha: true
   node: true
 extends: 'eslint:recommended'
+ecmaFeatures:
+  impliedStrict: true
 rules:
   indent:
     - 2
@@ -19,3 +21,17 @@ rules:
     - always
   strict:
     - 2
+  curly:
+    - 2
+  valid-jsdoc:
+    - 1
+  global-require:
+    - 2
+  eqeqeq:
+    - 1
+  no-magic-numbers:
+    - 1
+  no-useless-concat:
+    - 1
+  callback-return:
+    - 1

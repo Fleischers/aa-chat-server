@@ -1,10 +1,10 @@
 {
   "name": "aa-chat-server",
-  "version": "0.0.1-alpha.v2",
+  "version": "0.0.1-alpha.v3",
   "description": "Websocket chat server module, purposed to attach to another server",
   "main": "app.js",
   "scripts": {
-    "start": "./node_modules/.bin/forever --minUptime 1000 --spinSleepTime 1000 app.js",
+    "start": "./node_modules/.bin/forever --minUptime 1000 --spinSleepTime 1000 bin/aa-chat-server",
     "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha",
     "mocha": "./node_modules/.bin/mocha",
     "beautify": "./node_modules/.bin/js-beautify",
@@ -36,12 +36,14 @@
     "eslint": "^2.7.0",
     "istanbul": "^0.4.3",
     "js-beautify": "^1.6.2",
+    "jsdoc": "^3.4.0",
     "mocha": "^2.4.5",
     "pre-commit": "^1.1.2",
     "should": "^8.3.1",
     "socket.io-client": "^1.4.5"
   },
   "dependencies": {
+    "debug": "^2.2.0",
     "forever": "^0.15.1",
     "socket.io": "^1.4.5",
     "winston": "^2.2.0"
