@@ -9,7 +9,7 @@ describe('Websocket connection', function () {
   var PORT = 3002;
   // TODO change hardcoded host
   var socket = io('http://localhost:' + PORT);
-  var chat = new Chat({port: PORT});
+  var chat = new Chat(PORT);
 
   socket.on('info', function (msg) {
     winston.info(msg);

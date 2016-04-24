@@ -1,6 +1,6 @@
 {
   "name": "aa-chat-server",
-  "version": "0.0.1-alpha.v4",
+  "version": "0.0.1-alpha.v5",
   "description": "Websocket chat server module, purposed to attach to another server",
   "main": "app.js",
   "scripts": {

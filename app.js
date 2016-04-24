@@ -16,18 +16,11 @@ var history = new Map();
 
 
 function Chat(options) {
-  var port = DEFAULT_PORT;
-
-  if (options || options.port) {
-    port = options.port || DEFAULT_PORT;
-    if (options.port) {
-      io = new SocketServer(port);
-    } else {
-      io = SocketServer(options);
-    }
-
+  if (options) {
+    io = SocketServer(options);
+  } else {
+    io = SocketServer(DEFAULT_PORT);
   }
-
 }
 
 
