@@ -15,7 +15,7 @@ winston.add(winston.transports.Console, {
 });
 
 describe('Websocket connection', function () {
-  var PORT = 3002;
+  const PORT = 3002;
 
   var user1, user2;
   var chat = new Chat(PORT);
@@ -109,7 +109,8 @@ describe('Websocket connection', function () {
   });
 
   it('should additionally launch chat on default port just to check it works', function () {
-    new Chat();
+    let chat = new Chat();
+    winston.debug(chat);
   });
 
 });

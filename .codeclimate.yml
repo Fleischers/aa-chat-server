@@ -7,6 +7,9 @@ engines:
       - javascript
   eslint:
     enabled: true
+    checks:
+      strict:
+        enabled: false
   fixme:
     enabled: true
 ratings:
@@ -15,9 +18,3 @@ ratings:
   - "**.jsx"
 exclude_paths:
 - test/
-env:
-  es6: true
-  node: true
-rules:
-  # TODO check if it affect codeclimate
-  strict: 0
