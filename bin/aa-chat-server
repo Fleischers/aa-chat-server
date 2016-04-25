@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var AAChat = require('../app');
+var debug = require('debug')('aa-chat-server');
+var winston = require('winston');
+
+var DEFAULT_PORT = 3001;
+var PORT = process.env.AA_CHAT_PORT || DEFAULT_PORT;
+
+// configure winston
+winston.remove(winston.transports.Console);
+winston.add(winston.transports.Console, {
+  colorize: true,
+  level: 'debug',
+  prettyPrint: true,
+  humanReadableUnhandledException: true
+});
+
+winston.info('Launching standalone server on', PORT);
+
+var chat = new AAChat(PORT);
+chat.init();
+debug('Listening on http://localhost:' + PORT);

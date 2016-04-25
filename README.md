@@ -15,5 +15,49 @@
 Used `.editorconfig` for your Code Editor to keep code style.  
 `js-beautify` for auto format code
 
+
+### Tests
+`npm test` - to run tests  
+Look into `open coverage/lcov-report/index.html` to check coverage report
+
+### API
+
+#### message
+<- to server
+
+``` js
+{
+  "username": "Vasiliy",
+  "content": "Hello. I am here"
+}
+```
+
+-> from server
+
+``` js
+{
+  "_id": "2487539857",
+  "username": "Taras",
+  "content": "Me too.",
+  "date": "MON20121023"
+}
+```
+#### info
+-> from server
+
+status 0 is ok, else is error
+
+Disconnected user:
+``` js
+{
+  "status": 0,
+  "code": 0
+  "message": "user disconnected"
+}
+```
+#### history
+emit history to get previous messages from chat
+
+
 ### Useful info
 http://socket.io/docs/logging-and-debugging/
