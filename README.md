@@ -15,6 +15,11 @@
 Used `.editorconfig` for your Code Editor to keep code style.  
 `js-beautify` for auto format code
 
+
+### Tests
+`npm test` - to run tests  
+Look into `open coverage/lcov-report/index.html` to check coverage report
+
 ### API
 
 #### message
@@ -50,7 +55,8 @@ Disconnected user:
   "message": "user disconnected"
 }
 ```
-
+#### history
+emit history to get previous messages from chat
 
 
 ### Useful info

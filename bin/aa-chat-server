@@ -21,6 +21,5 @@ winston.add(winston.transports.Console, {
 winston.info('Launching standalone server on', PORT);
 
 var chat = new AAChat(PORT);
-chat.init(function () {
-  debug('Listening on http://localhost:' + PORT);
-});
+chat.init();
+debug('Listening on http://localhost:' + PORT);
