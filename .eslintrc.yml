@@ -67,7 +67,6 @@ rules:
   no-labels: 1
   no-lone-blocks: 2
   no-loop-func: 2
-  no-magic-number: 1
   no-multi-spaces: 1
   no-multi-str: 1
   no-native-reassign: 2
