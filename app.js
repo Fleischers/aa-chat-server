@@ -41,6 +41,7 @@ Chat.prototype.init = function (callback) {
 
   io.on('connection', function (socket) {
     winston.debug('user connection');
+    io.emit(CHAT.info, { status: 0, message: 'connected'});
 
     socket.on(CHAT.message, function onMessage(msg) {
       let responseMessage = _.cloneDeep(msg);
@@ -71,5 +72,7 @@ Chat.prototype.init = function (callback) {
     return callback();
   }
 };
+
+// Chat.createRoom();
 
 module.exports = Chat;
