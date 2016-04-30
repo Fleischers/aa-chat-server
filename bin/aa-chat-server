@@ -5,9 +5,10 @@
 var AAChat = require('../app');
 var debug = require('debug')('aa-chat-server');
 var winston = require('winston');
+require('dotenv').config();
 
-var DEFAULT_PORT = 3001;
-var PORT = process.env.AA_CHAT_PORT || DEFAULT_PORT;
+const DEFAULT_PORT = 3001;
+const PORT = process.env.AA_CHAT_PORT || DEFAULT_PORT;
 
 // configure winston
 winston.remove(winston.transports.Console);
@@ -21,6 +22,5 @@ winston.add(winston.transports.Console, {
 winston.info('Launching standalone server on', PORT);
 
 var chat = new AAChat(PORT);
-chat.init(function () {
-  debug('Listening on http://localhost:' + PORT);
-});
+chat.init();
+debug('Listening on http://localhost:' + PORT);
