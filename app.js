@@ -65,6 +65,7 @@ Chat.prototype.init = function () {
         history.push(responseMessage);
         winston.debug('message:', responseMessage);
         socket.broadcast.emit(CHAT.message, responseMessage);
+        socket.emit('echo', responseMessage);
       } else {
         socket.emit(CHAT.info, {
           status: 2,

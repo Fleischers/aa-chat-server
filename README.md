@@ -64,6 +64,8 @@ Disconnected user:
 #### history
 emit history to get previous messages from chat
 
+#### echo
+Message you emit to `message` will return back just after broadcasting to everyone else
 
 ### Useful info
 http://socket.io/docs/logging-and-debugging/
