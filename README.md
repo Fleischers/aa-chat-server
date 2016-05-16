@@ -4,6 +4,8 @@
 [![Code Climate](https://codeclimate.com/github/Fleischers/aa-chat-server/badges/gpa.svg)](https://codeclimate.com/github/Fleischers/aa-chat-server)
 [![Test Coverage](https://codeclimate.com/github/Fleischers/aa-chat-server/badges/coverage.svg)](https://codeclimate.com/github/Fleischers/aa-chat-server/coverage)
 [![Issue Count](https://codeclimate.com/github/Fleischers/aa-chat-server/badges/issue_count.svg)](https://codeclimate.com/github/Fleischers/aa-chat-server)
+[![bitHound Dependencies](https://www.bithound.io/github/Fleischers/aa-chat-server/badges/dependencies.svg)](https://www.bithound.io/github/Fleischers/aa-chat-server/master/dependencies/npm)
+[![Dependency Status](https://www.versioneye.com/user/projects/57399a3da0ca350034be7d72/badge.svg?style=flat)](https://www.versioneye.com/user/projects/57399a3da0ca350034be7d72)
 
 This is a module to create simple Websocket chat server
 
