@@ -1,8 +1,11 @@
 {
   "name": "aa-chat-server",
-  "version": "0.0.1-alpha.v6",
+  "version": "0.0.1-alpha.v8",
   "description": "Websocket chat server module, purposed to attach to another server",
   "main": "app.js",
+  "engines": {
+    "node": ">=4"
+  },
   "scripts": {
     "start": "./node_modules/.bin/forever --minUptime 1000 --spinSleepTime 1000 bin/aa-chat-server",
     "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha",
@@ -11,7 +14,8 @@
     "unstaged": "git status --porcelain",
     "codeclimate": "./node_modules/.bin/codeclimate-test-reporter < ./coverage/lcov.info",
     "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec",
-    "coveragereport": "firefox coverage/lcov-report/index.html",
+    "coveragereport": "open coverage/lcov-report/index.html",
+    "coveragefirefox": "firefox coverage/lcov-report/index.html",
     "eslint": "./node_modules/.bin/eslint --ignore-path .gitignore ."
   },
   "repository": {
@@ -44,6 +48,7 @@
   },
   "dependencies": {
     "debug": "^2.2.0",
+    "dotenv": "^2.0.0",
     "forever": "^0.15.2",
     "lodash": "^4.13.1",
     "shortid": "^2.2.6",
@@ -54,5 +59,6 @@
     "eslint",
     "test",
     "unstaged"
-  ]
+  ],
+  "tonicExampleFilename": "example/server.js"
 }

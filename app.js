@@ -47,6 +47,8 @@ function Chat(options) {
 Chat.prototype.init = function () {
 
   io.on('connection', function (socket) {
+    io.emit(CHAT.info, { status: 0, message: 'connected'});
+
     winston.debug('user %s connection', socket.id);
 
     /**
@@ -65,6 +67,7 @@ Chat.prototype.init = function () {
         history.push(responseMessage);
         winston.debug('message:', responseMessage);
         socket.broadcast.emit(CHAT.message, responseMessage);
+        socket.emit('echo', responseMessage);
       } else {
         socket.emit(CHAT.info, {
           status: 2,
@@ -116,5 +119,7 @@ Chat.prototype.init = function () {
     });
   });
 };
+
+// Chat.createRoom();
 
 module.exports = Chat;
