@@ -1,8 +1,11 @@
 {
   "name": "aa-chat-server",
-  "version": "0.0.1-alpha.v6",
+  "version": "0.0.1-alpha.v7",
   "description": "Websocket chat server module, purposed to attach to another server",
   "main": "app.js",
+  "engines": {
+    "node": ">=4"
+  },
   "scripts": {
     "start": "./node_modules/.bin/forever --minUptime 1000 --spinSleepTime 1000 bin/aa-chat-server",
     "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha",
@@ -11,7 +14,8 @@
     "unstaged": "git status --porcelain",
     "codeclimate": "./node_modules/.bin/codeclimate-test-reporter < ./coverage/lcov.info",
     "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec",
-    "coveragereport": "firefox coverage/lcov-report/index.html",
+    "coveragereport": "open coverage/lcov-report/index.html",
+    "coveragefirefox": "firefox coverage/lcov-report/index.html",
     "eslint": "./node_modules/.bin/eslint --ignore-path .gitignore ."
   },
   "repository": {
@@ -33,27 +37,28 @@
   "homepage": "https://github.com/Fleischers/aa-chat-server#readme",
   "devDependencies": {
     "codeclimate-test-reporter": "^0.3.1",
-    "eslint": "^2.7.0",
+    "eslint": "^2.10.1",
     "istanbul": "^0.4.3",
     "js-beautify": "^1.6.2",
     "jsdoc": "^3.4.0",
     "mocha": "^2.4.5",
-    "pre-commit": "^1.1.2",
+    "pre-commit": "^1.1.3",
     "should": "^8.3.1",
-    "socket.io-client": "^1.4.5"
+    "socket.io-client": "^1.4.6"
   },
   "dependencies": {
     "debug": "^2.2.0",
     "dotenv": "^2.0.0",
     "forever": "^0.15.1",
-    "lodash": "^4.11.1",
+    "lodash": "^4.12.0",
     "shortid": "^2.2.6",
-    "socket.io": "^1.4.5",
+    "socket.io": "^1.4.6",
     "winston": "^2.2.0"
   },
   "pre-commit": [
     "eslint",
     "test",
     "unstaged"
-  ]
+  ],
+  "tonicExampleFilename": "example/server.js"
 }
