@@ -1,10 +1,10 @@
 {
   "name": "aa-chat-server",
-  "version": "0.0.1-alpha.v8",
+  "version": "0.0.1-alpha.v9",
   "description": "Websocket chat server module, purposed to attach to another server",
   "main": "app.js",
   "engines": {
-    "node": ">=4"
+    "node": ">=4.8.4"
   },
   "scripts": {
     "start": "./node_modules/.bin/forever --minUptime 1000 --spinSleepTime 1000 bin/aa-chat-server",
